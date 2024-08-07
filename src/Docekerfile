@@ -1,0 +1,15 @@
+# Sử dụng hình ảnh Java base từ Docker Hub
+FROM openjdk:17-jdk-slim
+
+# Thiết lập biến môi trường cho ứng dụng
+ENV APP_HOME /app
+WORKDIR $APP_HOME
+
+# Sao chép tệp JAR từ máy cục bộ vào hình ảnh Docker
+COPY src/shopapp-0.0.1-SNAPSHOT.jar app.jar
+
+# Expose cổng mà ứng dụng của bạn sẽ chạy
+EXPOSE 8080
+
+# Chạy ứng dụng Spring Boot
+ENTRYPOINT ["java", "-jar", "app.jar"]
