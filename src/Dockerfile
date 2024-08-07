@@ -2,7 +2,7 @@
 FROM maven:3.8.5-openjdk-17 AS build
 WORKDIR /app
 COPY pom.xml /app
-COPY src /app/src
+COPY . .
 RUN mvn clean package -DskipTests
 RUN ls -l /app/target # Kiểm tra nội dung của thư mục target
 
