@@ -3,10 +3,10 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_DBNAME}?useSSL=false&serverTimezone=UTC
+        url: jdbc:mysql://mysql-197f1a7d-datbkpro225280-40b0.g.aivencloud.com:24899/defaultdb?useSSL=false&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: ${DATABASE_USER}
-    password: ${DATABASE_PASSWORD}
+    username: avnadmin
+    password: AVNS_kaRXyO8GQVV6iyNjDvF
   jpa:
     show-sql: true
     hibernate:
